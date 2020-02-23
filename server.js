@@ -9,7 +9,7 @@ const client = redis.createClient(REDIS_URL);
 app.get('/', (request, response) => {
 	console.log('request')
 	client.incr("visit", function(err, res) {
-		response.send("This is the " + res + " visitor>")
+		response.send("This is the " + res + " visitor.")
 	})
 })
 
